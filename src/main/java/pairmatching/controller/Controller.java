@@ -44,11 +44,11 @@ public class Controller {
 			pairRematching = InputView.inputPairRematching().trim();
 		}
 		if (pairRematching.isEmpty() || pairRematching.equals("네")) {
-			Pairs.createPair(crewList, mission);
+			Pairs.createPair(getCrewNames(crewList), mission);
 		}
 		OutputView.alarmPairMatchingResult();
 		for (Pair pair1 : Pairs.getPairList(mission)) {
-			OutputView.showPairMatchingResult(getCrewNames(pair1.getCrews()));
+			OutputView.showPairMatchingResult(pair1.getCrews());
 		}
 	}
 
@@ -57,7 +57,7 @@ public class Controller {
 		try {
 			OutputView.alarmPairMatchingResult();
 			for (Pair pair1 : Pairs.getPairList(mission)) {
-				OutputView.showPairMatchingResult(getCrewNames(pair1.getCrews()));
+				OutputView.showPairMatchingResult(pair1.getCrews());
 			}
 		} catch (IllegalArgumentException exception) {
 			System.out.println(exception.getMessage());

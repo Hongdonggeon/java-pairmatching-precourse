@@ -7,19 +7,21 @@ import java.util.Set;
 
 public class Pair {
 	private Mission mission;
-	private List<Crew> crews;
+	private List<String> crews;
 
-	public Pair(Mission mission, List<Crew> crews) {
+	public Pair(Mission mission, List<String> crews) {
 		this.mission = mission;
 		this.crews = crews;
 	}
 
-	public List<Crew> getCrews() {
+	public List<String> getCrews() {
 		return crews;
 	}
 
 	public Mission getMission() {
 		return mission;
 	}
+
+
 
 }
